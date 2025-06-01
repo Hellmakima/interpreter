@@ -1,0 +1,14 @@
+# First Script 💫
+x = 10
+y = 5
+result = (x + y) * 2
+
+result
+
+a = -3
+c = ((a=3^2)+(b=4^2))
+c^(0.5)
+vars
+
+v = 8--3
+3*7-(2*(d=8))
