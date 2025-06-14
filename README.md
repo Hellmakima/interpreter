@@ -2,7 +2,7 @@
 
 This is a recursive descent expression parser and evaluator written in Python. It supports variable assignment, arithmetic operations, and correct operator precedence, with an interactive mode and file-based execution.
 
-## Reference: [YT @CoreDumpped](https://www.youtube.com/watch?v=0c8b7YfsBKs) [video](youtube.com/watch?v=0c8b7YfsBKs)
+## Reference: [YT @CoreDumpped video](https://www.youtube.com/watch?v=0c8b7YfsBKs)
 
 ## Features
 
@@ -13,6 +13,7 @@ This is a recursive descent expression parser and evaluator written in Python. I
 * Syntax error detection and helpful messages
 * Interactive REPL and `.alya` file execution
 * Includes simple tests for correctness
+* example `a = (9*8^2)-4^(b=-9)`
 
 ## Run
 
@@ -24,6 +25,8 @@ U can run a script by uncommenting
     # file_path = 'main.alya'
     # parse_file(file_path)
 ```
+
+Additionally I have included `a.java` a java version of the same code.
 
 ## License
 
