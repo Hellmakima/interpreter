@@ -153,16 +153,6 @@ def infix_binding_power(op: str) -> tuple:
         return (3.1, 3.0)
     raise ValueError(f"invalid operator {op}")
 
-def is_assignment(parsed_expression: Expression) -> bool:
-    """
-    Checks if the parsed expression is an assignment.
-    An assignment is an Operation with '=' as the operator and an Atom on the left-hand side.
-    """
-    return (isinstance(parsed_expression, Operation) and
-            parsed_expression.op.arg == '=' and
-            isinstance(parsed_expression.lhs, Atom) and
-            parsed_expression.lhs.arg.isalpha())
-
 def evaluate(expression: Expression):
     """
     Evaluates the given parsed expression.
@@ -176,7 +166,7 @@ def evaluate(expression: Expression):
                 return variables[expression.arg]
             else:
                 raise NameError(f"name '{expression.arg}' is not defined")
-    elif isinstance(expression, Operation):
+    if isinstance(expression, Operation):
         op_arg = expression.op.arg
         if op_arg == '=':
             # Handle assignment
